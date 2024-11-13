@@ -1,5 +1,5 @@
 import {Canvas, useFrame} from "@react-three/fiber";
-import {OrbitControls} from "@react-three/drei";
+import {OrbitControls, Sparkles} from "@react-three/drei";
 import {useRef} from "react";
 import {color} from "three/src/nodes/tsl/TSLCore.js";
 
@@ -16,6 +16,7 @@ const RotatingCube = () => {
         <mesh ref={meshRef}>
             <cylinderGeometry args = {[1,1,1]}/>
             <meshLambertMaterial color="#468585" emissive="#468585"></meshLambertMaterial>
+            <Sparkles count={100} scale={1} size={6} speed={0.002} noise={0.2} color="orange" />
         </mesh>
     )
 }
